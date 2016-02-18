@@ -113,3 +113,40 @@ minetest.register_node("recycle:sac_poubelle",{
 		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3},
 	},
 })
+
+minetest.register_node("recycle:journal",{
+	description = "Vieux journal",
+	drawtype="nodebox",
+	tiles ={
+		"journal_up.png",
+		"journal_up.png",
+		"journal_cote.png",
+		"journal_cote.png",
+		"journal_av_ar.png",
+		"journal_av_ar.png",
+	},
+	--[[tiles ={
+		"journal_up.png",
+		"journal_down.png",
+		"journal_right.png",
+		"journal_left.png",
+		"journal_back.png",
+		"journal_front.png",
+	},]]
+	inventory_image = "journal.png",
+	wield_image = "journal.png",
+	paramtype="light",
+	paramtype2 = "facedir",
+	walkable = false,
+	drop="recycle:journal",
+	buildable_to = false,
+	groups = {crumbly=2, recycle=1},
+	node_box={
+		type = "fixed",
+		fixed = {-0.4, -0.5, -0.5, 0.4, -5/16, 0.5},
+	},
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.4, -0.5, -0.5, 0.4, -5/16, 0.5},
+	},
+})
