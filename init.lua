@@ -98,7 +98,7 @@ minetest.register_node("recycle:canette_cola", {
 })
 
 minetest.register_node("recycle:sac_poubelle",{
-	description = "Peau de banane (plantlike)",
+	description = "Sac poubelle",
 	drawtype="plantlike",
 	tiles ={"sac_poubelle.png"},
 	inventory_image = "sac_poubelle.png",
