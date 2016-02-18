@@ -66,6 +66,7 @@ minetest.register_node("recycle:peau_banane",{
 	tiles ={"plant_banana.png"},
 	inventory_image = "plant_banana.png",
 	paramtype="light",
+	paramtype2="facedir",
 	walkable = false,
 	drop="recycle:peau_banane",
 	buildable_to = false,
@@ -78,9 +79,11 @@ minetest.register_node("recycle:peau_banane",{
 
 minetest.register_node("recycle:canette_cola", {
 	description = "Canette de COLA",
-	drawtype="plantlike",
+	--drawtype="plantlike",
+	drawtype="mesh",
+	mesh="canette.b3d",
 	tiles ={"canette_cola.png"},
-	inventory_image = "canette_cola.png",
+	inventory_image = "img_canette_cola.png",
 	paramtype="light",
 	walkable = false,
 	drop="recycle:canette_cola",
@@ -88,7 +91,7 @@ minetest.register_node("recycle:canette_cola", {
 	groups = {crumbly=2, recycle=1},
 	selection_box = {
 		type = "fixed",
-		fixed = {-0.3, -0.5, -0.3, 0.3, 0.5, 0.3},
+		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
 	},
 })
 
