@@ -14,7 +14,7 @@ minetest.register_node("recycle:poubelle_verte", {
 	paramtype2 = "facedir",
 	tiles = {"poubelle_verte.png"},
 	drop = "recycle:poubelle_verte",
-	inventory_image = "poubelle_verte.png",
+	inventory_image = "img_poubelle_verte.png",
 	wield_image = "img_poubelle_verte.png",
 	groups = {crumbly=3,stone=1},
 	on_punch=function(pos, node, player, pointed_thing)
@@ -43,9 +43,9 @@ minetest.register_node("recycle:poubelle_noire", {
 	paramtype2 = "facedir",
 	tiles = {"poubelle_noire.png"},
 	drop = "recycle:poubelle_noire",
-	inventory_image = "poubelle_noire.png",
+	inventory_image = "img_poubelle_noire.png",
 	wield_image = "img_poubelle_noire.png",
-	groups = {stone=1},
+	groups = {crumbly=3,stone=1},
 	on_punch=function(pos, node, player, pointed_thing)
 		local item_en_main = player:get_wielded_item():get_name() 
 		local playername = player:get_player_name()
@@ -63,8 +63,9 @@ minetest.register_node("recycle:poubelle_noire", {
 minetest.register_node("recycle:peau_banane",{
 	description = "Peau de banane",
 	drawtype="plantlike",
-	tiles ={"plant_banana.png"},
-	inventory_image = "plant_banana.png",
+	tiles ={"banane.png"},
+	inventory_image = "banane.png",
+	wield_image = "banane.png",
 	paramtype="light",
 	paramtype2="facedir",
 	walkable = false,
@@ -84,6 +85,7 @@ minetest.register_node("recycle:canette_cola", {
 	mesh="canette.b3d",
 	tiles ={"canette_cola.png"},
 	inventory_image = "img_canette_cola.png",
+	wield_image = "img_canette_cola.png",
 	paramtype="light",
 	walkable = false,
 	drop="recycle:canette_cola",
@@ -100,6 +102,7 @@ minetest.register_node("recycle:sac_poubelle",{
 	drawtype="plantlike",
 	tiles ={"sac_poubelle.png"},
 	inventory_image = "sac_poubelle.png",
+	wield_image = "sac_poubelle.png",
 	paramtype="light",
 	walkable = false,
 	drop="recycle:sac_poubelle",
